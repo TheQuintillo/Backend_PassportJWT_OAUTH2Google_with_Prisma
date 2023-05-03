@@ -5,7 +5,7 @@ import paymentRoute from "./routes/payment";
 import passport from "passport";
 import sessionPassport from "./middlewares/sessionPassport.middleware";
 import cors from "cors";
-
+import indexRouter from "./routes/imagesRoutes/images.routes";
 import registerRouter from "./routes/register.route";
 import loginJWT from "./routes/passportAuthJWT/authJWT.routes";
 
@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //ROUTES
-//app.use("/", userRouter);
+app.use("/images", indexRouter);
 app.use("/payment", paymentRoute);
 app.use("/register", registerRouter);
 app.use("/login", loginJWT);

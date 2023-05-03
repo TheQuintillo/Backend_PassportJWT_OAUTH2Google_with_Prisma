@@ -25,7 +25,15 @@ router.get(
 
 router.get("/protected", (req, res) => {
   console.log("USER:", req);
-  res.json({ user: req.user });
+  res.json(req.user);
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    res.redirect("http://localhost:3000");
+    return err;
+    // cannot access session here
+  });
 });
 
 /*

@@ -6,7 +6,7 @@ export const prisma = new PrismaClient();
 export default class UsersGoogle {
   constructor(private readonly prismaUserJWT: PrismaClient["user"]) {}
 
-  async createUser(data: any): Promise<User> {
+  async createUser(data: UserJWT): Promise<User> {
     return this.prismaUserJWT.create({ data });
   }
 

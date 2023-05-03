@@ -41,7 +41,8 @@
     "./src/*/*",
     "src/models/User/UserGoogle.model.ts",
     "src/routes/passportAuthGoogle/authGoogle.routes.ts",
-    "src/routes/passportAuthJWT/authJWT.routes.ts"
+    "src/routes/passportAuthJWT/authJWT.routes.ts",
+    "src/routes/imagesRoutes/images.routes.ts"
   ],
   "exclude": ["node_modules"],
   "files": ["package.json"]
