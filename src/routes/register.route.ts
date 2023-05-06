@@ -1,4 +1,5 @@
 import { Router } from "express";
+import bcrypt from "bcrypt";
 import UserJWT, { prisma } from "../models/User/UserJWT.model";
 
 const router = Router();
@@ -15,9 +16,11 @@ router.post("/", async (req, res) => {
   if (findUserDB) {
     console.log("USUARIO REGISTRADO");
   } else {
-    await user.createUser({ name, email, password }).catch((err) => {
-      console.log("Email registrado");
-      res.json({ msg: "Usuario Registrado" });
+    bcrypt.hash(password, 10, async function (err, password) {
+      await user.createUser({ name, email, password }).catch((err) => {
+        console.log("Email registrado");
+        res.json({ msg: "Usuario Registrado" });
+      });
     });
   }
 
