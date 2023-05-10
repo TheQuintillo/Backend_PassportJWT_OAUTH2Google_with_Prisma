@@ -1,5 +1,5 @@
 import { Router } from "express";
-import UserJWT, { prisma } from "../../models/User/UserJWT.model";
+import UserJWT, { prisma } from "@models/User/UserJWT.model";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
@@ -31,14 +31,10 @@ router.post("/", async (req, res) => {
           id: userWithEmail.id,
         });
       } else {
-        res.json({ msg: "Error en el password" });
+        res.json({ msg: "Password no valido" });
       }
-      // result == true
     });
   }
-
-  //if (userWithEmail.password !== password)
-  // return res.json({ msg: "Password no valido" });
 });
 
 export default router;

@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
+      "@entities/*": ["src/entities/*"],
       "@routes/*": ["src/routes/*"],
       "@services/*": ["src/services/*"],
       "@controllers/*": ["src/controllers/*"],
@@ -36,14 +37,7 @@
       "rootDir": "."
     }
   },
-  "include": [
-    "./src/*",
-    "./src/*/*",
-    "src/models/User/UserGoogle.model.ts",
-    "src/routes/passportAuthGoogle/authGoogle.routes.ts",
-    "src/routes/passportAuthJWT/authJWT.routes.ts",
-    "src/routes/imagesRoutes/images.routes.ts"
-  ],
+  "include": ["./src/*", "./src/**/*"],
   "exclude": ["node_modules"],
   "files": ["package.json"]
 }

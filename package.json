@@ -16,6 +16,7 @@
     "@types/express": "^4.17.17",
     "@types/express-session": "^1.17.7",
     "@types/jsonwebtoken": "^9.0.2",
+    "@types/module-alias": "^2.0.1",
     "@types/morgan": "^1.9.4",
     "@types/node": "^18.16.1",
     "@types/passport": "^1.0.12",
@@ -33,9 +34,24 @@
     "express-session": "^1.17.3",
     "image-downloader": "^4.3.0",
     "jsonwebtoken": "^9.0.0",
+    "module-alias": "^2.2.2",
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1"
+  },
+  "_moduleAliases": {
+    "@src": "./src",
+    "@config": "./src/config",
+    "@controllers": "./src/controllers",
+    "@db": "./src/db",
+    "@entities": "./src/entities",
+    "@libs": "./src/libs",
+    "@middlewares": "./src/middlewares",
+    "@models": "./src/models",
+    "@routes": "./src/routes",
+    "@services": "./src/services",
+    "@utils": "./src/utils",
+    "@validators": "./src/validators"
   }
 }

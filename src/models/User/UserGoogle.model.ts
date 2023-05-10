@@ -2,7 +2,7 @@ import { PrismaClient, UserGoogle } from "@prisma/client";
 import {
   UserGoogleModel,
   FindUserGoogleModel,
-} from "../../entities/UserGoogle.model";
+} from "@entities/UserGoogle.model";
 
 export const prisma = new PrismaClient();
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
-import UserJWT, { prisma } from "../models/User/UserJWT.model";
+import UserJWT, { prisma } from "@models/User/UserJWT.model";
 
 const router = Router();
 

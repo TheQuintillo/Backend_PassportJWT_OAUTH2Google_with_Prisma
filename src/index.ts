@@ -1,13 +1,14 @@
+import "module-alias/register";
 import express from "express";
 import morgan from "morgan";
-import authGoogleRoute from "./routes/passportAuthGoogle/authGoogle.routes";
-import paymentRoute from "./routes/payment";
+import authGoogleRoute from "@routes/passportAuthGoogle/authGoogle.routes";
+import paymentRoute from "@routes/payment";
 import passport from "passport";
-import sessionPassport from "./middlewares/sessionPassport.middleware";
+import sessionPassport from "@middlewares/sessionPassport.middleware";
 import cors from "cors";
-import indexRouter from "./routes/imagesRoutes/images.routes";
-import registerRouter from "./routes/register.route";
-import loginJWT from "./routes/passportAuthJWT/authJWT.routes";
+import indexRouter from "@routes/imagesRoutes/images.routes";
+import registerRouter from "@routes/register.route";
+import loginJWT from "@routes/passportAuthJWT/authJWT.routes";
 
 require("./auth/passportGoogleSSO");
 

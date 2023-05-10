@@ -1,6 +1,6 @@
 import passport from "passport";
-import { UserGoogleModel } from "../entities/UserGoogle.model";
-import UsersGoogle, { prisma } from "../models/User/UserGoogle.model";
+import { UserGoogleModel } from "@entities/UserGoogle.model";
+import UsersGoogle, { prisma } from "@models/User/UserGoogle.model";
 
 const user = new UsersGoogle(prisma.userGoogle);
 
