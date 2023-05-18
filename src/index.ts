@@ -34,3 +34,5 @@ app.use("/login_google", authGoogleRoute);
 app.listen(4000, () => {
   console.log("server on port 4000");
 });
+
+export default app;

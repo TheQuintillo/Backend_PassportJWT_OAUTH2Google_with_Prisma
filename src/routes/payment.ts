@@ -8,7 +8,6 @@ router.get(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    console.log(req.user);
     if (req.user) return res.send({ user: req.user });
   }
 );

@@ -15,7 +15,7 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000",
+    successRedirect: "http://localhost:3000/login/success",
     failureRedirect: "/login_auth/auth/google/",
   }),
   (req, res) => {
@@ -24,7 +24,6 @@ router.get(
 );
 
 router.get("/protected", (req, res) => {
-  console.log("USER:", req);
   res.json(req.user);
 });
 

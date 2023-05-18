@@ -10,22 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
-    "@types/express-session": "^1.17.7",
-    "@types/jsonwebtoken": "^9.0.2",
-    "@types/module-alias": "^2.0.1",
-    "@types/morgan": "^1.9.4",
-    "@types/node": "^18.16.1",
-    "@types/passport": "^1.0.12",
-    "@types/passport-google-oauth20": "^2.0.11",
-    "@types/passport-jwt": "^3.0.8",
-    "nodemon": "^2.0.22",
-    "prisma": "^4.13.0",
-    "ts-node": "^10.9.1"
-  },
   "dependencies": {
     "@prisma/client": "^4.13.0",
     "bcrypt": "^5.1.0",
@@ -33,12 +17,36 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "image-downloader": "^4.3.0",
+    "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
     "module-alias": "^2.2.2",
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
+    "@types/jest": "^29.5.1",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mocha": "^10.0.1",
+    "@types/module-alias": "^2.0.1",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^18.16.1",
+    "@types/passport": "^1.0.12",
+    "@types/passport-google-oauth20": "^2.0.11",
+    "@types/passport-jwt": "^3.0.8",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prisma": "^4.13.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1"
   },
   "_moduleAliases": {
     "@src": "./src",
@@ -53,5 +61,12 @@
     "@services": "./src/services",
     "@utils": "./src/utils",
     "@validators": "./src/validators"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
   }
 }

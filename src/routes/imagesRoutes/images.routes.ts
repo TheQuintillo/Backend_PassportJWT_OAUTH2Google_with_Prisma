@@ -18,8 +18,6 @@ router.get("/gallery/:seccion/:id", function (req, res, next) {
   fs.createReadStream(
     __dirname + `../../../../public/images/gallery/${seccion}/${id}.jpg`
   ).pipe(res);
-
-  console.log(res);
 });
 
 export default router;
