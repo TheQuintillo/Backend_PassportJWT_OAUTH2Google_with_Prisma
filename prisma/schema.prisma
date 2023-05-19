@@ -23,4 +23,5 @@ model UserGoogle {
   email String  @unique
   googleId String @unique
   picture String
+  token String
 }

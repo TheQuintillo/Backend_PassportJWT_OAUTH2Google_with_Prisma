@@ -24,13 +24,18 @@ passport.use(
       });
 
       if (findUser) {
-        return cb(null, findUser);
+        const token = await user.updateToken(
+          profile.emails[0].value,
+          accessToken
+        );
+        return cb(null, token);
       } else {
         const User = new UserGoogleModel(
           profile.displayName,
           profile.emails[0].value,
           profile.id,
-          profile.photos[0].value
+          profile.photos[0].value,
+          accessToken
         );
         const createUser = await user.createUser(User);
         return cb(null, createUser);
