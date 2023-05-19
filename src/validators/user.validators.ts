@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
 
 const validator = Joi.object({
-  name: Joi.string().alphanum().min(3).max(30).required(),
+  name: Joi.string().min(3).max(30).required(),
   email: Joi.string()
     .email({ minDomainSegments: 2, tlds: { allow: true } })
     .required(),
@@ -16,6 +16,6 @@ export const validatorForm = (
   _: Response,
   next: NextFunction
 ) => {
-  const { error } = validator.validate(req.body);
+  const { error } = validator.validate(req.body, { abortEarly: true });
   error ? next(new Error(error.message)) : next();
 };
