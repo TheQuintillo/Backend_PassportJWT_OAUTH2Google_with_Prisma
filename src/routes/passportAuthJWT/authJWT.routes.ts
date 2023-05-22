@@ -24,7 +24,6 @@ router.post("/", async (req, res) => {
           },
           "prueba"
         );
-
         res.json({
           msg: "Welcome Back!",
           token: jwtToken,

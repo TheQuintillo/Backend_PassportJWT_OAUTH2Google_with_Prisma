@@ -9,6 +9,7 @@ import cors from "cors";
 import indexRouter from "@routes/imagesRoutes/images.routes";
 import registerRouter from "@src/routes/register/register.route";
 import loginJWT from "@routes/passportAuthJWT/authJWT.routes";
+import cookieParser from "cookie-parser";
 
 require("./auth/passportGoogleSSO");
 
