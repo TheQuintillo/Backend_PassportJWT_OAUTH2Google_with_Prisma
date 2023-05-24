@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
             id: userWithEmail.id,
             email: userWithEmail.email,
           },
-          "prueba"
+          process.env.SECRET_JWT
         );
         res.json({
           msg: "Welcome Back!",

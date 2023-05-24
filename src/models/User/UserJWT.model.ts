@@ -15,9 +15,25 @@ export default class UsersGoogle {
       where: { email },
     });
   }
+  async findUserByRefreshToken(refreshToken: string): Promise<User> {
+    return this.prismaUserJWT.findFirst({
+      where: { refreshToken: { has: refreshToken } },
+    });
+  }
+
+  async updateToken(refreshToken?: any, email?: any): Promise<User> {
+    return this.prismaUserJWT.update({
+      where: {
+        email,
+      },
+      data: { refreshToken },
+    });
+  }
   async findUserById(id: number): Promise<User> {
     return this.prismaUserJWT.findUnique({
-      where: { id },
+      where: {
+        id,
+      },
     });
   }
 }
